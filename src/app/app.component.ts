@@ -5,6 +5,11 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent {
   title = 'kahzum';
+
+  openModal() {
+    console.log("I got clicked!");
+  }
 }
