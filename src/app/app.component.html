@@ -7,9 +7,14 @@
     </div>
   </div>
   <div class="chart">
-    Chart goes here!
+    <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+      [legend]="barChartLegend" [chartType]="barChartType">
+    </canvas>
   </div>
-  <div class="footer">
+  <div class="footer" *ngIf="this.slope > 0">
     Congratulations! Performing this action increased your foot traffic! Continue this action to increase customer influx.
+  </div>
+  <div class="footer" *ngIf="this.slope < 0">
+    Oh no! This might not have worked as well as expected! Try another marketing method to see how well it worked.
   </div>
 </div>
