@@ -1,0 +1,21 @@
+<div class="main-container">
+  <div class="header">
+    <div class="date">Week 2/14 - 2/21</div>
+    <div class="action-section">
+      <div class="text">Action: Placed a Stand Outside</div>
+      <a class="insight-button" routerLink="/input" routerLinkActive="active">New Insight</a>
+    </div>
+  </div>
+  <div class="chart">
+    <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+      [legend]="barChartLegend" [chartType]="barChartType">
+    </canvas>
+  </div>
+  <div class="footer" *ngIf="this.slope > 0">
+    Congratulations! Performing this action increased your foot traffic! Continue this action to increase customer
+    influx.
+  </div>
+  <div class="footer" *ngIf="this.slope < 0">
+    Oh no! This might not have worked as well as expected! Try another marketing method to see how well it worked.
+  </div>
+</div>
