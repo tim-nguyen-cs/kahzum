@@ -2,38 +2,36 @@
   <div class="title">New Insight</div>
   <form (ngSubmit)="onSubmit()" #insightForm="ngForm">
     <div class="form-group">
+      <label for="name">Action:</label>
+      <input type="text" class="form-control" id="action" [(ngModel)]="action" name="action">
+    </div>
+    <div class="form-group">
       <label for="name">Sunday Traffic:</label>
-      <input type="number" class="form-control" id="name" required [(ngModel)]="sampleData.sundayTrafficCount" name="name">
+      <input type="number" class="form-control" id="sunday" [(ngModel)]="sundayTrafficCount" name="name">
     </div>
     <div class="form-group">
       <label for="name">Monday Traffic:</label>
-      <input type="number" class="form-control" id="name" required [(ngModel)]="sampleData.mondayTrafficCount"
-        name="name">
+      <input type="number" class="form-control" id="monday" [(ngModel)]="mondayTrafficCount" name="name">
     </div>
     <div class="form-group">
       <label for="name">Tuesday Traffic:</label>
-      <input type="number" class="form-control" id="name" required [(ngModel)]="sampleData.tuesdayTrafficCount"
-        name="name">
+      <input type="number" class="form-control" id="tuesday"[(ngModel)]="tuesdayTrafficCount" name="name">
     </div>
     <div class="form-group">
       <label for="name">Wednesday Traffic:</label>
-      <input type="number" class="form-control" id="name" required [(ngModel)]="sampleData.wednesdayTrafficCount"
-        name="name">
+      <input type="number" class="form-control" id="wednesday" [(ngModel)]="wednesdayTrafficCount" name="name">
     </div>
     <div class="form-group">
       <label for="name">Thursday Traffic:</label>
-      <input type="number" class="form-control" id="name" required [(ngModel)]="sampleData.thursdayTrafficCount"
-        name="name">
+      <input type="number" class="form-control" id="thursday" [(ngModel)]="thursdayTrafficCount" name="name">
     </div>
     <div class="form-group">
       <label for="name">Friday Traffic:</label>
-      <input type="number" class="form-control" id="name" required [(ngModel)]="sampleData.fridayTrafficCount"
-        name="name">
+      <input type="number" class="form-control" id="friday" [(ngModel)]="fridayTrafficCount" name="name">
     </div>
     <div class="form-group">
       <label for="name">Saturday Traffic:</label>
-      <input type="number" class="form-control" id="name" required [(ngModel)]="sampleData.saturdayTrafficCount"
-        name="name">
+      <input type="number" class="form-control" id="saturday" [(ngModel)]="saturdayTrafficCount" name="name">
     </div>
     <button type="submit" class="btn btn-success">Submit</button>
 
