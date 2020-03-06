@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { ChartsModule } from 'ng2-charts';
 import { InputComponent } from './input/input.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { InsightsComponent } from './insights/insights.component';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     AppComponent,
     InputComponent,
     DashboardComponent,
+    InsightsComponent,
   ],
   imports: [
     BrowserModule,

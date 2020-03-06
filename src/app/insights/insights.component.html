@@ -1,0 +1,68 @@
+<div class="insights-container">
+  <div class="overview-container">
+    <div class="title">Your Kahzum Statistics</div>
+    <div class="graph-container">
+      <div class="graph">
+        <canvas id="hourlyVisitChart" width="400" height="400"></canvas>
+      </div>
+      <div class="graph">
+        <canvas id="dailyVisitChart" width="400" height="400"></canvas>
+      </div>
+      <div class="graph">
+        <!-- <canvas id="weeklyVisitChart" width="400" height="400"></canvas> -->
+      </div>
+    </div>
+  </div>
+  <div class="weekly-summary">
+    <div class="title">Weekly Summary</div>
+    <div class="summary">
+      <div class="visits"><b>Total Visits:</b> {{ insightD.weekly.weekData.visits }}</div>
+      <div class="returnees"><b>Total Returnees:</b> {{ insightD.weekly.weekData.returnees }}</div>
+      <div class="linger"><b>Average Linger Time:</b> {{ insightD.weekly.weekData.linger }}</div>
+    </div>
+    <div class="daily-container">
+      <div class="daily-estimates" *ngFor="let dayData of insightD.daily">
+        <div class="title">{{ dayData.dayOfTheWeek }}, {{ dayData.date }}</div>
+        <div class="statistics">
+          <div class="visits">
+            <div class="value">{{ dayData.visits }}</div>
+            <div class="label">Visits</div>
+          </div>
+          <div class="returnees">
+            <div class="value">{{ dayData.returnees }}</div>
+            <div class="label">Returnees</div>
+          </div>
+          <div class="linger-time">
+            <div class="value">{{ dayData.linger }}</div>
+            <div class="label">A.L.T.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="daily-summary">
+    <div class="title">Daily Summary</div>
+    <div class="daily-section" *ngFor="let day of [0,1,2,3,4,5,6]">
+      <div class="index">1</div>
+      <div class="hourly-container">
+        <div class="hourly-estimates" *ngFor="let hourData of insightD.hourly">
+          <div class="title">{{ hourData.timestamp + 43200 | date: 'h a' }}</div>
+          <div class="statistics">
+            <div class="visits">
+              <div class="value">{{ hourData.visits }}</div>
+              <div class="label">Visits</div>
+            </div>
+            <div class="returnees">
+              <div class="value">{{ hourData.returnees }}</div>
+              <div class="label">Returnees</div>
+            </div>
+            <div class="linger-time">
+              <div class="value">{{ hourData.linger }}</div>
+              <div class="label">A.L.T.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

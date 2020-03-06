@@ -1,0 +1,98 @@
+.insights-container {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+
+  .overview-container {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 5px solid black;
+
+    .title {
+      text-align: center;
+    }
+
+    .graph-container {
+      display: flex;
+      justify-content: space-evenly;
+
+      .graph {
+        height: 400px;
+        width: 400px;
+      }
+    }
+  }
+
+  .weekly-summary {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 5px solid black;
+
+    .title {
+      text-align: center;
+    }
+
+    .summary {
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    .daily-container {
+      display: flex;
+      justify-content: space-between;
+
+      .daily-estimates {
+        display: flex;
+        flex-direction: column;
+
+        .statistics {
+          display: flex;
+          justify-content: space-evenly;
+
+          .visits, .returnees, .linger-time {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .value {
+              border-radius: 50%;
+              margin-bottom: 10px;
+            }
+
+            .label {
+
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+  .daily-summary {
+    display: flex;
+    flex-direction: column;
+
+    .title {
+      text-align: center;
+    }
+
+    .daily-section {
+      display: flex;
+
+      .index {
+        margin-right: 5px;
+      }
+
+      .hourly-container {
+        display: flex;
+        justify-content: space-between;
+
+        .hourly {
+
+        }
+      }
+
+    }
+  }
+}
